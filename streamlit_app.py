@@ -3,13 +3,13 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 import joblib
-import cv2
+# import cv2
 import os
 from tensorflow.keras.models import load_model
 from PIL import Image
 
 IMG_SIZE = (256 , 256)
-MODEL_PATH = "brain_tumor_unet.h5"
+MODEL_PATH = "brain_tumor_unetV2.h5"
 model = load_model(MODEL_PATH)
 
 def preprocess_image(image):

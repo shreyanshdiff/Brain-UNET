@@ -20,12 +20,10 @@ def compute_sample_weights(Y_train):
     )
     class_weights_dict = {i: w for i, w in enumerate(class_weights)}
 
-    # ✅ Map weights and reshape them for the generator
     sample_weights = np.vectorize(class_weights_dict.get)(Y_train)
     return sample_weights.reshape(Y_train.shape)  # Reshape to match Y_train
 
 
-# ✅ Custom Generator to Include Sample Weights
 class WeightedDataGenerator(tf.keras.utils.Sequence):
     def __init__(self, X, Y, batch_size=16, augment=False):
         self.X = X
