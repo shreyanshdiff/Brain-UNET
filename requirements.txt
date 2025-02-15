@@ -5,4 +5,4 @@ tensorflow == 2.18.0
 scikit-learn == 1.6.1
 Keras-Preprocessing == 1.1.2
 matplotlib == 3.10.0
-
+opencv-python == 4.11.0.86
